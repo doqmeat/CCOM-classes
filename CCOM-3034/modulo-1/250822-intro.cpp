@@ -1,7 +1,7 @@
 // the way i forgot how to compile a file in c++
 
 // HOW TO COMPILE A FILE IN C++
-// g++ -o [NAME OF EXE] [CPP FILE PATH]
+// g++ -o [NAME OF EXE] [CPP FILE PATH] && ./[FILE NAME]
 
 #include <iostream>
 using namespace std;
