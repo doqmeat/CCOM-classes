@@ -42,8 +42,8 @@ bool isPrime(int num)
 	// verifica si num tiene otro divisor que no sea 1, o el mismo num.
 	for (int i = 2; i <= num - 1; i++)
 	{
-		if (num % i == 0) // si esto da a false entonces si tiene otro divisor...
-			return false;		// entonces retorna falso
+		if (num % i == 0) // si esto da a falso entonces si tiene otro divisor...
+			return false;		// y retorna falso pq no es primo
 	}
 	return true;
 }
