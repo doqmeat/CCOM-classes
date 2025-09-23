@@ -117,7 +117,7 @@ int noRepetirElementos(int arregloA[], int arregloB[], int arregloAB[], int unio
 	// se itera sobre todos los elementos de conjuntoAB
 	for (int i = 0; i < A_B_SIZE; i++)
 	{
-		// variable booleana para dectectar cuando se debe saltar el numero.
+		// flag para dectectar cuando se debe saltar el numero.
 		// se actualiza a false en cada iteracion.
 		bool skip = false;
 

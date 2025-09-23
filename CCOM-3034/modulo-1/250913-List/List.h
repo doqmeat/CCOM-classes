@@ -18,7 +18,7 @@ public:
 	void print() const;
 	int getSize() const;
 	int find(int value) const;
-	List &operator=(const List &l2);
+	List &operator=(const List &l2); // se le pone const para que no se cambie el obj!!
 };
 
 #endif

@@ -1,0 +1,3 @@
+/home/doqmeat/documents/CCOM/CCOM-3034/asignaciones/lab2/CMakeFiles/main.dir
+/home/doqmeat/documents/CCOM/CCOM-3034/asignaciones/lab2/CMakeFiles/edit_cache.dir
+/home/doqmeat/documents/CCOM/CCOM-3034/asignaciones/lab2/CMakeFiles/rebuild_cache.dir

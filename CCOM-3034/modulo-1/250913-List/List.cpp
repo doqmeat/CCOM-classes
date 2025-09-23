@@ -12,6 +12,7 @@ List::List()
 	a = new int[cap]; // se inicializa el puntero arreglo dinamico
 }
 
+// PARTE DEL BIG 5!
 // destructor para la clase de lista
 List::~List()
 {
@@ -100,8 +101,9 @@ int List::find(int value) const
 	return -1;		// no fue encontrado....
 }
 
+// PARTE DEL BIG FIVE!
 // asignarle los data members de l2 a l1
-List &List::operator=(const List &l2) // & = returnning un obj por referencia!
+List &List::operator=(const List &l2) // & = returning un obj por referencia!, const = para no cambiar los valores de los data members de l2
 {
 	if (this != &l2) // verifica que no sean la misma dirección
 	{

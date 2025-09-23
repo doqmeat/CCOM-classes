@@ -5,7 +5,6 @@
 #include <iostream>
 #include <stdexcept>
 #include "Rectangle.h"
-#include <format>
 #include <string>
 #include <cmath>
 

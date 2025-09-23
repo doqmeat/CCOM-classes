@@ -1,0 +1,6 @@
+# CMake build directories
+CCOM-3034/build/
+*/CMakeFiles
+
+# Executables and binaries
+main
