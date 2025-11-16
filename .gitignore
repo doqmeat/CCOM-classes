@@ -1,5 +1,6 @@
 # CMake build directories
 CCOM-3034/build/
+CCOM-3034/.vscode/
 */CMakeFiles
 
 # Executables and binaries
