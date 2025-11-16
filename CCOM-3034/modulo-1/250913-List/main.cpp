@@ -31,7 +31,7 @@ int main()
 	l2.print();
 
 	l2 = l;
-	// estaba ocurriendo un error ya qye no estaba devolviendo el objeto
+	// estaba ocurriendo un error ya que no estaba devolviendo el objeto
 	// por referencia en la funcion de operator=
 
 	l.print();

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream> // libreria para utilizar file stream objects, ahora se pueden utilizar los siguientes tipos de datos: ifstream, ofstream, fstream
 #include <string>
+#include <typeinfo>
 
 using namespace std;
 
@@ -21,9 +22,15 @@ int main()
 
 	// tenemos que hacer un loop para que coja todo los datos del file.
 
-	while (getline(awesomeFileConnect, content))
+	int num = 0;
+	int other;
+	while (awesomeFileConnect >> content)
 	{
 		cout << content << endl;
+		if (num == 0)
+			other = stoi(content);
+		num++;
+		cout << num << endl;
 	}
 	awesomeFileConnect.close();
 

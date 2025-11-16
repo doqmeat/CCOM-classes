@@ -12,13 +12,70 @@ List::List()
 	a = new int[cap]; // se inicializa el puntero arreglo dinamico
 }
 
-// PARTE DEL BIG 5!
-// destructor para la clase de lista
+// PARTE DEL BIG 5 (destructor)
 List::~List()
 {
 	if (a != nullptr)
 		delete[] a; // se borra el arreglo dinámico
-								// a = nullptr;	// no es necesario!!!
+}
+
+// PARTE DEL BIG 5 (copy constructor)
+List::List(const List &l2)
+{
+	size = l2.size;
+	cap = l2.cap;
+	a = new int[cap];
+	for (int i = 0; i < size; i++)
+	{
+		a[i] = l2.a[i];
+	}
+}
+
+// PARTE DEL BIG 5! (move constructor)
+List::List(List &&l2)
+{
+	size = l2.size; // se le asigna el mismo size y cap
+	cap = l2.cap;
+	delete[] a; // se borra el arreglo dinámico
+	a = l2.a;		// se le asigna el arreglo dinámico de l2 al current obj
+
+	// ahora hay que darle update al obj 2
+	l2.a = nullptr;
+	l2.size = l2.cap = 0;
+}
+
+// PARTE DEL BIG FIVE! (copy assignment operator)
+List &List::operator=(const List &l2)
+{
+
+	if (this != &l2) // verifica que no sean la misma dirección
+	{
+		size = l2.size; // se le asignan mismo size y capacidad
+		cap = l2.cap;
+		delete[] a;				// se borra el arreglo dinámico
+		a = new int[cap]; // se inicializa uno nuevo
+		for (int i = 0; i < size; i++)
+			a[i] = l2.a[i];
+	}
+	return *this; // this pointer dereferenced
+}
+
+// PARTE DEL BIG FIVE! (move assignment operator)
+List &List::operator=(List &&l2)
+{
+	// se verifica si a no esta apuntando a un puntero
+	if (this->a != nullptr)
+		delete[] a;
+
+	size = l2.size; // se le asigna el mismo size y cap
+	cap = l2.cap;
+	a = l2.a; // se le asigna el arreglo dinámico de l2 al current obj
+
+	// ahora hay que darle update al obj 2
+	l2.a = nullptr;
+	l2.size = l2.cap = 0;
+
+	return *this; // this pointer dereferenced
 }
 
 void List::insert(int value, int position)
@@ -99,20 +156,4 @@ int List::find(int value) const
 		if (a[i] == value)
 			return i; // fue encontrado
 	return -1;		// no fue encontrado....
-}
-
-// PARTE DEL BIG FIVE!
-// asignarle los data members de l2 a l1
-List &List::operator=(const List &l2) // & = returning un obj por referencia!, const = para no cambiar los valores de los data members de l2
-{
-	if (this != &l2) // verifica que no sean la misma dirección
-	{
-		size = l2.size; // se le asignan mismo size y capacidad
-		cap = l2.cap;
-		delete[] a;				// se borra el arreglo dinámico
-		a = new int[cap]; // se inicializa uno nuevo
-		for (int i = 0; i < size; i++)
-			a[i] = l2.a[i];
-	}
-	return *this; // this pointer dereferenced
 }
