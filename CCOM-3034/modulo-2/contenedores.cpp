@@ -52,10 +52,17 @@ int main()
 		cout << "helena value: " << multi.find("helena")->second << endl;
 	}
 
-	// for loop
+	// for loop (con ->)
 	for (auto it = multi.begin(); it != multi.end(); it++)
 	{
 		cout << "[key] : " << it->first << " | value : " << it->second << endl;
+	}
+	cout << endl;
+
+	// for loop (it dereferenced)
+	for (auto it = multi.begin(); it != multi.end(); it++)
+	{
+		cout << "[key] : " << (*it).first << " | value : " << (*it).second << endl;
 	}
 	cout << endl;
 
