@@ -96,6 +96,14 @@ int main()
 	unordered_set<int> u = {4, 3, 6, 7, 1};
 	u.insert(10);
 
+	// find (el método find no devuelve data, si no, es un iterador que apunta al nodo donde se encuantra la llave)
+	auto findMe = u.find(10);
+	if (findMe != u.end())
+	{
+		cout << "llave encontrada: " << *findMe << endl; // se le hace dereference
+	}
+	cout << endl;
+
 	for (auto it = u.begin(); it != u.end(); it++)
 		cout << " " << *it;
 	cout << endl;
